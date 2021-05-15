@@ -1,0 +1,53 @@
+{
+  "name": "annadata_backend",
+  "version": "1.0.0",
+  "description": "backend of annadata website and app",
+  "main": "server.js",
+  "engines": {
+    "node": "12.16.3",
+    "npm": "6.14.4"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "format": "prettier --write .",
+    "js:fix": "eslint ./ --fix",
+    "test:js": "eslint ./",
+    "fix": "npm run format && npm run js:fix && npm run test:js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Team Annadata",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.25.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.6",
+    "nodemailer": "^6.6.0",
+    "twilio": "^3.61.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.2",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.3.0",
+    "prettier": "2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format && npm run js:fix && npm run test:js"
+    }
+  }
+}

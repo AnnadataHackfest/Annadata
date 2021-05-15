@@ -1,0 +1,34 @@
+/* .sideIncome{
+    padding: 1.5rem;
+    background-image: linear-gradient(to right bottom, white, whitesmoke);
+    margin-top: 0;
+    align-items: center;
+}
+.sideIncome__1{
+    padding: 2rem;
+}
+.sideIncome__2{
+    padding: 2rem;
+}
+.sideIncome__3{
+    padding: 2rem;
+}
+.sideIncome h1{
+    text-transform: uppercase;
+    color: black;
+    background-color: lightgreen;
+    transition: all .2s;
+} */
+.side-img {
+  height: 15rem;
+  width: 20rem;
+  border-radius: 0.5rem;
+  margin-left: 5rem;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.6);
+  transition: all 0.2s;
+}
+.side-img:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-0.2rem);
+  filter: blur(1px) brightness(90%);
+}

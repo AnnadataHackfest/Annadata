@@ -1,0 +1,19 @@
+extends:
+  - react-app
+  - react-app/jest
+  - standard
+  - plugin:prettier/recommended
+env:
+  es6: true
+root: true
+plugins:
+  - react
+rules:
+  arrow-spacing: 'error'
+  no-const-assign: 'error'
+  no-var: 'error'
+  prefer-const: 'error'
+  prefer-template: 'error'
+  prefer-destructuring: ['error', { 'object': true, 'array': false }]
+  object-curly-spacing: [2, 'always']
+  no-console: 'off'
